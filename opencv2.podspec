@@ -87,11 +87,11 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files = 'headers/**/*.h'
+  s.source_files = 'headers/**/*.{h,hpp}'
   # s.exclude_files = "lib/*.a"
 
   s.vendored_libraries = 'lib/*.dylib'
-  s.preserve_paths = 'headers/**.h'
+  s.preserve_paths = 'headers/**.{h,hpp}'
   s.xcconfig = { 'HEADER_SEARCH_PATHS' => "${PODS_ROOT}/#{s.name}/headers/**" }
 
   # s.public_header_files = "headers/**/*.h"
